@@ -1,4 +1,7 @@
 # Restful Web Services with Spring Boot
+
+Build a REST API for a Social Media
+Application
  
 Users REST API
 + Retrieve all Users
@@ -12,8 +15,15 @@ Users REST API
 
 Posts REST API
 + Retrieve all posts for a User
-	GET /users/{id}/posts
+    GET /users/{id}/posts
 + Create a post for a User
-	POST /users/{id}/posts
+    POST /users/{id}/posts
 + Retrieve details of a post
-	GET /users/{id}/posts/{post_id}
+    GET /users/{id}/posts/{post_id}
+
+Key Resources: 
+Users
+Posts
+Key Details:
+User: id, name, birthDate
+Post: id, description
