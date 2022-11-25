@@ -27,3 +27,14 @@ Posts
 Key Details:
 User: id, name, birthDate
 Post: id, description
+
+Return the correct response status
+Resource is not found => 404 
+Server exception => 500 
+Validation error => 400
+
+Important Response Statuses 200 — Success
+201 — Created
+204 — No Content
+401 — Unauthorized (when authorization fails) 400 — Bad Request (such as validation error) 404 — Resource Not Found
+500 — Server Error
