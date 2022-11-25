@@ -35,4 +35,9 @@ public class UserDaoService {
         return user;
     }
 
+    public boolean deleteUserById(int id) {
+        Predicate<? super User> predicate = user -> user.getId().equals(id);
+        return users.removeIf(predicate);
+    }
+
 }
