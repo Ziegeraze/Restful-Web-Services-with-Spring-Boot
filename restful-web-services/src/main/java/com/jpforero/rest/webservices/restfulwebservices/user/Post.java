@@ -2,6 +2,7 @@ package com.jpforero.rest.webservices.restfulwebservices.user;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Size;
 
 @Entity
 public class Post {
@@ -9,6 +10,7 @@ public class Post {
     @GeneratedValue
     private Integer id;
 
+    @Size(min=10, message =  "Post should have at least 10 characters")
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
