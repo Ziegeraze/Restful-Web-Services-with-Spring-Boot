@@ -1,6 +1,5 @@
 package com.jpforero.rest.webservices.restfulwebservices.exception;
 
-import com.jpforero.rest.webservices.restfulwebservices.user.UserNotFoundException;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -26,7 +25,7 @@ public class CustomResponseEntityExceptionHandler extends ResponseEntityExceptio
 
     }
 
-    @ExceptionHandler(UserNotFoundException.class)
+    @ExceptionHandler({UserNotFoundException.class, PostNotFoundException.class})
     public final ResponseEntity<ErrorDetails> handleUserNotFoundException(Exception ex, WebRequest request) throws Exception {
         ErrorDetails errorDetails = new ErrorDetails(LocalDateTime.now(),
                 ex.getMessage(), request.getDescription(false));
